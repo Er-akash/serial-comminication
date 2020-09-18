@@ -1,0 +1,150 @@
+ls1.scrot    -screen shot
+
+2.boot cmd: sudo nano /etc/profile
+  
+3.convert ui file into py file:
+ ex-pyuic4 /home/pi/dag1/stacked.ui -o /home/pi/dag1/stacked.py
+
+4.configuration file:
+ sudo nano /boot/config.txt 
+	or
+ sudo leafpad /boot/config.txt
+5.setting of keypad layout-(ex=@ Replaced by "):
+ sudo nano /etc/default/keyboard
+
+6.copy file
+ sudo cp-R source path destination path
+ sudo cp-R /home/pi/dag1 /media/usb0
+
+7.remove file:
+  sudo rm file name
+  remove folder:
+  sudo rmdir folder name
+
+8.move file/folder:
+  sudo mv source file destination file
+
+9.updating all package & install newer version of that updated package.
+  sudo apt-get update
+  sudo apt-get upgrade
+
+10.Rpi config tool:
+   sudo raspi-config
+
+11.install package
+  sudo apt-get install 
+
+12.Pin config of rpi:
+   gpio readall
+
+10.serial comm:
+   python -m pip install pyserial
+
+11.for ecxel sheet:
+   pip install --user xlutils
+   pip install xlrd
+   pip install XlsxWriter
+
+12.install pyqt4:
+   
+   sudo apt-get install qtdesigner
+
+13.USB MOUNT at (/media/usb0)
+   1.install ntfs package:
+	sudo apt-get install ntfs-3g
+   2.install usbmount package:
+	sudo apt-get install usbmount
+   3.open systemed-udevd.service file:
+	sudo nano /lib/systemd/system/systemd-udevd.service
+   4.change MountFlags=slaves to MountFlags=shared
+   5.sudo reboot
+
+14.shows the manual(how to use cmd):
+   man cmd name
+
+15.set date and time:
+   sudo date -s "01 apr 2018 00:00:00"
+
+16.open all files:
+   ls
+17.shows the file with extension,date&time,name of file:
+   ls -l
+18.show all hidden files:
+   ls -a
+19.print(GPIO.RPI_INFO):  
+   it gives basic info.about rpi.
+import py_compile
+py_compile.compile('/home/pi/Desktop/tester_logic.py')
+
+20.mount usb pendrive in rpi3(open the PD at usb0 location)
+
+   1)install ntfs package using following cmd
+	sudo apt-get install ntfs-3g
+   2)install usbmount package using following cmd
+	sudo apt-get install usbmount
+   3)open systemed-udevd.service file
+	sudo nano /lib/systemd/system/systemd-udevd.service
+   4)change MountFlags=slaves to MountFlags=shared
+   5)sudo reboot
+
+21.pdftotext convert-
+   1.sudo pip install pdftotext
+   2.sudo pip install pdfminer
+   3.to convert pdf file into text
+     pdf2txt.py command-the package includes the pdf2txt.py command-line command, which you can use to extract text and images. 
+     The command supports many options and is very flexible. Some popular options are shown below. See the usage information for complete details.
+
+     pdf2txt.py [options] filename.pdf
+    
+    Options:
+    -o output file name
+    -p comma-separated list of page numbers to extract
+    -t output format (text/html/xml/tag[for Tagged PDFs])
+    -O dirname (triggers extraction of images from PDF into directory)
+    -P password 
+     pdf2txt.py -O myoutput -o myoutput/myfile.html -t html myfile.pdf
+     eg-
+     pdf2txt.py -O /home/pi/Desktop/netwrk_project -o /home/pi/Desktop/netwrk_project/var.txt -t text /home/pi/Desktop/netwrk_project/var.pdf
+
+22. pdf to image convert:
+    pip install pdf2image
+    sudo apt install poppler-utils
+
+23. install wifi package:
+    sudo pip install wifi
+	
+24.rpi speech recognisation:
+   1.sudo pip install SpeechRecognition
+   2.sudo apt-get install espeak
+   3.sudo apt-get install flac
+    
+   install pyaudio-
+   1) sudo apt-get install python-dev
+   2) sudo apt-get install portaudio19-dev
+   3) sudo pip install pyaudio
+
+25.install webview:
+   sudo apt-get install python-kde4
+
+26.modbus install:
+   pip install minimalmodbus
+
+27.instll pillow for image
+sudo apt-get install libjpeg-dev -y
+pip install Pillow
+
+
+
+
+enable_uart=1
+dtoverlay=pi3-disable-bt
+
+usb mount proceture
+https://raspberrypi.stackexchange.com/questions/41959/automount-various-usb-stick-file-systems-on-jessie-lite
+*Pyautogui Library is for mouse and keyboard related function without accessing physically, 
+we can able to access through python code using pyautogui library. Visit pyautogui cheat 
+sheet for more mouse and keyboard related functions.
+>>sudo pip3 install pyautogui
+>>pip install python-xlib
+*wifi
+sudo pip install wifi

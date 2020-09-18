@@ -1,0 +1,20 @@
+1. USB MOUNT at (/media/usb0)
+   1.install ntfs package:
+	sudo apt-get install ntfs-3g
+   2.install usbmount package:
+	sudo apt-get install usbmount
+   3.open systemed-udevd.service file:
+	sudo nano /lib/systemd/system/systemd-udevd.service
+   4.change PrivateMounts=yes to PrivateMounts=no
+   5.sudo reboot
+2. install pyautogui for keyboard mouse focus-
+   pip3 install pyautogui
+3. install cups driver refer below link:
+   https://www.howtogeek.com/169679/how-to-add-a-printer-to-your-raspberry-pi-or-other-linux-computer/
+
+
+
+4. for extracting rar file:
+	sudo apt-get install unrar-free
+   to extract file-
+	unrar filename.rar

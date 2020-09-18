@@ -1,0 +1,65 @@
+
+Install Anydesk on Raspberry Pi
+
+Please follow these steps to install Anydesk on Raspberry Pi:
+
+1. Download the .deb file from https://anydesk.com/download?os=raspi
+
+2. Go to the downloterminal
+
+# sudo dpkg -i anydesk_5.5.5-1_armhf.deb
+
+# sudo apt-get -f install
+
+-----------------------------------------------
+-copy cmd
+ $sudo cp -r source Destinationaded location, where you have download the file “anydesk_5.5.5-1_armhf.deb”
+
+3. Type following commands under 
+-boot
+$ sudo nano /etc/profile  #run command to put in boot or comment to take ot from boot
+
+-Install TightVnc cmd
+link--https://programmaticponderings.com/2012/12/26/installing-tightvnc-on-the-raspberry-pi/
+$sudo apt-get install tightvncserver
+-TO CHECK WHETHER ITS INSTALLED OR NOT 
+$vncserver
+$sudo netstat -tulpn
+-stop tightvnc 
+$ vncserver -kill :1
+----------------------------------------------
+-RTC installation os command:
+os.system('sudo hwclock -w')
+os.system('sudo hwclock -r')
+-Through Rpi
+$ sudo raspi-config 
+-----------------------------------------------------
+-To import xlrd 
+$pip install xlrd
+
+-To open workbook in exel sheet 
+    wb=xlrd.open_workbook(loc)             ###loc is location of file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
